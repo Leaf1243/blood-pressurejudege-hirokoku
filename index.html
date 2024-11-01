@@ -13,7 +13,7 @@
   .picture img,
 .video {width: 100%; height: auto; }
  </style>
-
+ <link rel="stylesheet" href="style.css">
 </head>
 <body>
  <h1>血圧判定</h1>  
@@ -33,7 +33,7 @@
 
  if (isNaN(systolic) || isNaN(diastolic)) {
  result = '両方の値を正しく入力してください。';
- } else if (systolic >=180 && diastolic >=110) || (systolic >=180) || (diastolic >=110){
+ }} else if (systolic >=180 || diastolic >=110) || (systolic >=180 && diastolic >=110) {
  result = 'Ⅲ度高血圧です。';
  } else if ((systolic >=160 && systolic <=179) || (diastolic >=100 && diastolic <=109) || (systolic >=160 && systolic <=179 && diastolic >=100 && diastolic <=109)) {
  result = 'Ⅱ度高血圧です。';
@@ -45,9 +45,9 @@ result = "高値血圧です。"
  result = '正常高値血圧です。';
  } else if (systolic <120 && diastolic <80) {
  result = '正常血圧です。';
- } else if (systolic <=100 || diastolic <=60) {
+ } else if (systolic <=100 && diastolic <=60) {
  result = '低血圧です。';
- }
+ 
 
  document.getElementById('result').innerText = result;
  }
@@ -122,9 +122,6 @@ result = "高値血圧です。"
         }
  </script>  
  <figure class="picture"><img src="picture.png" alt=""></figure>
- <p>出典:高血圧治療ガイドライン2019</p>
- <br><br><br>
- <h4>動画 血圧の仕組み</h4>
  <video src="血圧.mp4" controls class="video"></video>
 </body>
 </html>
