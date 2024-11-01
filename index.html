@@ -33,7 +33,7 @@
 
  if (isNaN(systolic) || isNaN(diastolic)) {
  result = '両方の値を正しく入力してください。';
- } else if (systolic >=180 || diastolic >=110) {
+ } else if (systolic >=180 || diastolic >=110) || (systolic >=180) || diastolic >=110{
  result = 'Ⅲ度高血圧です。';
  } else if ((systolic >=160 && systolic <=179) || (diastolic >=100 && diastolic <=109) || (systolic >=160 && systolic <=179 && diastolic >=100 && diastolic <=109)) {
  result = 'Ⅱ度高血圧です。';
