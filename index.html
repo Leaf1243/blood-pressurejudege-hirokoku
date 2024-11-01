@@ -31,8 +31,6 @@
 
  if (isNaN(systolic) || isNaN(diastolic)) {
  result = '両方の値を正しく入力してください。';
- } else if (systolic <=100 || diastolic <=60) {
- result = '低血圧です。';
  } else if (systolic >=180 || diastolic >=110) {
  result = 'Ⅲ度高血圧です。';
  } else if ((systolic >=160 && systolic <=179) || (diastolic >=100 && diastolic <=109) || (systolic >=160 && systolic <=179 && diastolic >=100 && diastolic <=109)) {
@@ -45,6 +43,8 @@ result = "高値血圧です。"
  result = '正常高値血圧です。';
  } else if (systolic <120 && diastolic <80) {
  result = '正常血圧です。';
+ } else if (systolic <=100 || diastolic <=60) {
+ result = '低血圧です。';
  }
 
  document.getElementById('result').innerText = result;
