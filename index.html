@@ -11,7 +11,7 @@
      margin: 20px auto;}
      .picture img,
 .video {width: 100%; height: auto; }
-.a {text-align: right;}
+.a .b {text-align: right;}
  </style>
 </head>
 <body>
@@ -48,10 +48,10 @@
 result = "高値血圧です。"
 } else if (systolic >=120 && systolic <=129 && diastolic <80) {
  result = '正常高値血圧です。';
- } else if (systolic <120 && diastolic <80) {
- result = '正常血圧です。';
  } else if (systolic <=100 || diastolic <=60) {
  result = '低血圧です。';
+ } else if (systolic <120 && diastolic <80) {
+ result = '正常血圧です。';
  }
 
      document.getElementById('result').innerText = result;  
@@ -96,6 +96,8 @@ result = "高値血圧です。"
  </script>
  <figure class="picture"><img src="picture.png" alt=""></figure>
  <p class="a">出典:高血圧治療ガイドライン2019</p>
+ <h2>低血圧：100以下または60以下</h2>
+ <p class="b">世界保健機関の基準より</p>
  <h3>動画 血圧の仕組み</h3>
  <video src="血圧.mp4" controls class="video"></video>
 </body>  
